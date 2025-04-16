@@ -236,6 +236,6 @@ const toggleFavorite = () => {
   margin-right: 6px;
   fill: none;
   stroke: #1e293b;
-  stroke-width: 1.5px;
+  stroke-width: 1.51px;
 }
 </style>
