@@ -3,7 +3,7 @@ package com.codesafe.model;
 public class User {
     private String name;
     private String nametest;
-    private String role
+    private String roleaaaaaa
     prusedField = 42; // unused
 
     public User(String name, String role) {
