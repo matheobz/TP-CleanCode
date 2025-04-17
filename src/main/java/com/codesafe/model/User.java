@@ -8,7 +8,7 @@ public class User {
 
     public User(String name, String role) {
         this.name = name;
-        this.role = role;
+        this.role = role;qsd sqd
     }
 
     public String getName() {
