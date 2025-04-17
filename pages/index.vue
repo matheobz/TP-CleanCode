@@ -112,8 +112,9 @@ import { useCocktailStore } from '~/stores/cocktails';
 const cocktailStore = useCocktailStore();
 const featuredCocktails = computed(() => cocktailStore.getAllCocktails.slice(0, 4));
 const aiSuggestion = computed(() => cocktailStore.getAiSuggestion);
+const aiSuggestionTEST = "aa";
 
-const categories = ['Popular', 'Classic', 'Tropical', 'Refreshing', 'Strong', 'Non-Alcoholic'];
+const categories = ['Popular', 'Classic', 'Tropical', 'Refreshing', 'Strong', 'Non-Alcoho
 
 const features = [
   {
