@@ -4,10 +4,12 @@ import com.codesafe.service.UserService;
 
 public class App {
     public static void main(String[] args) {
-        UserService s = new UserService();
-        s.init(); s.init(); // duplicate call
-        s.addUser("Bob", "admin");
-        s.addUser("Alice", "user");
-        s.printAll();
+        UserService userService = new UserService();
+        userService.init();
+
+        userService.addUser("Bob", "admin");
+        userService.addUser("Alice", "user");
+
+        userService.printAllUsers();
     }
 }

@@ -1,10 +1,8 @@
 package com.codesafe.model;
 
 public class User {
-    private String name;
-    private String nametest;
-    private String role
-    prusedField = 42; // unused
+    private final String name;
+    private final String role;
 
     public User(String name, String role) {
         this.name = name;

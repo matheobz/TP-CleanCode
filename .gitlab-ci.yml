@@ -1,0 +1,35 @@
+stages:
+  - test
+
+variables:
+  MAVEN_OPTS: "-Dmaven.test.failure.ignore=false"
+
+test_regression:
+  stage: test
+  script:
+    - mvn test -Djunit.jupiter.tags=regression
+  only:
+    - develop
+    - /^feature\/.*$/
+
+test_all:
+  stage: test
+  script:
+    - mvn test -Djunit.jupiter.tags=regression,validation
+    - mvn verify
+  only:
+    - master
+    - /^release\/.*$/
+    - prod
+
+coverage_report:
+  stage: test
+  script:
+    - mvn verify
+  artifacts:
+    paths:
+      - target/site/jacoco
+  only:
+    - master
+    - /^release\/.*$/
+    - prod
